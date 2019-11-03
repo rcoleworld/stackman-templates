@@ -10,6 +10,6 @@ services:
       - './:/usr/src/app/frontend'
       - '/app/node_modules'
     ports:
-      - '3001:3000'
+      - '3000:3000'
     environment:
       - NODE_ENV=development

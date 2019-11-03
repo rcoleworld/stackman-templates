@@ -1,13 +1,23 @@
 API := "node-api-container"
 USER := "rcoleworld"
+
 .PHONY: build-image
 build-image:
-	cd ./api &&\
+	cd $(PWD)/db &&\
 	docker-compose build
+	cd $(PWD)/api &&\
+	docker-compose build &&\
+	cd $(PWD)/frontend &&\
+	docker-compose build
+	
 
 .PHONY: run-server
 run-server: build-image
-	cd ./api &&\
+	cd $(PWD)/db &&\
+	docker-compose up -d
+	cd $(PWD)/api &&\
+	docker-compose up -d &&\
+	cd $(PWD)/frontend &&\
 	docker-compose up
 
 .PHONY: remove-all
@@ -17,7 +27,14 @@ remove-all:
 
 .PHONY: stop 
 stop:
-	docker ps -aq | xargs docker stop 2> /dev/null || echo "none"
+	cd $(PWD)/api &&\
+	docker-compose down &&\
+	cd $(PWD)/frontend &&\
+	docker-compose down
+
+.PHONY: query
+query:
+	mysql -h 127.0.0.1 -u root -P 3306 -p db
 
 .PHONY: purge
 purge: stop
