@@ -1,0 +1,17 @@
+{
+    "name": "image_channel_application_api",
+    "version": "1.0.0",
+    "description": "Container running Node.js",
+    "author": "Reginald Thomas <reginaldcolethomas@gmail.com>",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "dependencies": {
+        "express": "^4.16.1"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.4"
+    }
+}

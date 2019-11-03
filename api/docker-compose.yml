@@ -1,0 +1,21 @@
+version: '3'
+services:
+  api:
+    image: node-backend
+    build: .
+    networks:
+      - backend
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./:/usr/src/app
+
+  web-cli:
+    image: node-backend
+    networks:
+      - backend
+    command: sh
+
+networks:
+  backend:
+    driver: bridge
