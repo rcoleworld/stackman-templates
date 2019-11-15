@@ -26,6 +26,7 @@ services:
             - "8081:8081"
         volumes:
             - ./api/:/usr/src/app/api
+            - /app/node_modules/
 
     web-cli:
         image: node-backend

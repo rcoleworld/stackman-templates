@@ -7,7 +7,9 @@ var app = express();
 
 var chatroomRouter = require('./routes/chatroom');
 var loginRouter = require('./routes/login');
+
 app.use(bodyParser.json())
+
 app.use('/chatroom', chatroomRouter);
 app.use('/login', loginRouter);
 
