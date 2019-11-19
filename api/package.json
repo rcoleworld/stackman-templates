@@ -1,5 +1,5 @@
 {
-    "name": "image_channel_application_api",
+    "name": "mock-tech",
     "version": "1.0.0",
     "description": "Container running Node.js",
     "author": "Reginald Thomas <reginaldcolethomas@gmail.com>",

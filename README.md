@@ -1,4 +1,4 @@
-# image-channel-application
+# moch-tech
 
 ## Basic commands to get started
 ### To build: $ docker-compose build
