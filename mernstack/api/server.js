@@ -5,12 +5,12 @@ const HOST = '0.0.0.0';
 
 var app = express();
 
-var chatroomRouter = require('./routes/chatroom');
+var testRouter = require('./routes/test');
 var loginRouter = require('./routes/login');
 
 app.use(bodyParser.json())
 
-app.use('/chatroom', chatroomRouter);
+app.use('/test', chatroomRouter);
 app.use('/login', loginRouter);
 
 app.listen(PORT, HOST);

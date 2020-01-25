@@ -1,8 +1,8 @@
 {
-    "name": "mock-tech",
+    "name": "stackman-template-mern",
     "version": "1.0.0",
     "description": "Container running Node.js",
-    "author": "Reginald Thomas <reginaldcolethomas@gmail.com>",
+    "author": "<reginaldcolethomas@gmail.com>",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
