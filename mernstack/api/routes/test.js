@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var chatroomController = require('../controllers/testController');
+var testController = require('../controllers/testController');
 
 router.get('/', testController.hello);
 
