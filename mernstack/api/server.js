@@ -10,7 +10,7 @@ var loginRouter = require('./routes/login');
 
 app.use(bodyParser.json())
 
-app.use('/test', chatroomRouter);
+app.use('/test', testRouter);
 app.use('/login', loginRouter);
 
 app.listen(PORT, HOST);
